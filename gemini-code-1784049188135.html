@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stan Route — Умная логистика и управление цепями поставок</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-wider text-white">STAN<span class="text-amber-500">ROUTE</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-amber-500 transition-colors">Услуги</a>
+                <a href="#it-platform" class="hover:text-amber-500 transition-colors">IT-Платформа</a>
+                <a href="#advantages" class="hover:text-amber-500 transition-colors">Преимущества</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Контакты</a>
+            </div>
+            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-slate-950 bg-amber-500 hover:bg-amber-400 transition-all rounded-lg">
+                Связаться
+            </a>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ ЭКРАН (HERO) -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Задний фон с параллакс-эффектом и оверлеем -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Логистика и негабаритные перевозки" 
+                 class="w-full h-full object-cover object-center opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center lg:text-left grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold tracking-wider text-amber-500 bg-amber-500/10 rounded-full uppercase">
+                    Индустрия 4.0 в действии
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-none">
+                    Умная логистика <br><span class="text-amber-500">без границ</span>
+                </h1>
+                <p class="text-lg text-slate-300 max-w-2xl">
+                    Интегрируем передовые IT-решения в управление цепями поставок. Профессионально организуем перевозку негабаритных грузов любой сложности и обеспечиваем высокотехнологичное складское хранение по всему Казахстану и СНГ.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="px-8 py-4 text-base font-bold text-slate-950 bg-amber-500 hover:bg-amber-400 rounded-lg shadow-lg shadow-amber-500/20 transition-all text-center">
+                        Рассчитать стоимость
+                    </a>
+                    <a href="#services" class="px-8 py-4 text-base font-bold text-white bg-slate-900 border border-slate-700 hover:bg-slate-800 rounded-lg transition-all text-center">
+                        Наши услуги
+                    </a>
+                </div>
+            </div>
+
+            <!-- Интерактивный виджет на главном экране -->
+            <div class="lg:col-span-5 hidden lg:block">
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl backdrop-blur-md shadow-2xl">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                        <span class="text-xs text-slate-400 font-mono">ID ЗАКАЗА: SR-4902-KZ</span>
+                        <span class="px-2.5 py-0.5 text-xs font-semibold bg-emerald-500/10 text-emerald-400 rounded-full">В пути</span>
+                    </div>
+                    <div class="py-6 space-y-4">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase tracking-wider">Отправление</p>
+                                <p class="text-sm font-semibold text-white">Алматы, Склад A</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-slate-500 uppercase tracking-wider">Назначение</p>
+                                <p class="text-sm font-semibold text-white">Атырау, Промзона</p>
+                            </div>
+                        </div>
+                        <!-- Линия прогресса -->
+                        <div class="relative w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="absolute left-0 top-0 h-full w-2/3 bg-amber-500 rounded-full"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-slate-400">
+                            <span>Пройдено: 1,840 км</span>
+                            <span>Осталось: 920 км</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
+                        <span class="text-xs text-slate-500">Груз: Турбинное оборудование (74 тонны)</span>
+                        <span class="text-xs font-bold text-amber-500">GPS Активен</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- РАЗДЕЛ: УСЛУГИ -->
+    <section id="services" class="py-32 border-t border-slate-900 bg-slate-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-20">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Наши ключевые направления</h2>
+                <p class="text-slate-400">Обеспечиваем надежную инфраструктуру для ваших товаров и тяжелой техники, контролируя каждый шаг в цифровом пространстве.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Карта 1: Негабарит -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" 
+                             alt="Негабаритные грузы" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-amber-500 transition-colors">Негабаритные и тяжеловесные перевозки</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Проектируем сложные маршруты, получаем специальные разрешения, организуем сопровождение и доставляем промышленное оборудование, спецтехнику и конструкции любого масштаба по Казахстану и СНГ.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors">
+                            Запросить расчет негабарита →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Карта 2: Склад -->
+                <div class="group relative bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition-all duration-300">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1553413719-87587a29172f?auto=format&fit=crop&w=800&q=80" 
+                             alt="Умный склад" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-amber-500 transition-colors">Высокотехнологичный 3PL-склад</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Автоматизированный WMS-учет, адресное хранение, кросс-докинг и полная интеграция с вашей ERP. Обеспечиваем идеальную сохранность сложного оборудования и быстрый оборот товаров.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors">
+                            Оценить складские площади →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ: IT-ПЛАТФОРМА -->
+    <section id="it-platform" class="py-32 border-t border-slate-900 bg-slate-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-sm font-semibold text-amber-500 uppercase tracking-widest">Цифровая экосистема</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Все процессы — у вас на экране</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Мы убрали человеческий фактор из логистики. Наша внутренняя IT-платформа контролирует процессы доставки и хранения 24 часа в сутки.
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Контроль датчиков (24/7)</h4>
+                                <p class="text-xs text-slate-400">Датчики наклона, удара и температуры фиксируют состояние негабаритного груза онлайн.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-white text-base">Интеграция по API</h4>
+                                <p class="text-xs text-slate-400">Связываем нашу WMS/TMS-систему с вашей ERP (1C, SAP) за несколько дней для автоматического обмена документами.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+                    <div class="h-6 w-full flex items-center space-x-2 pb-4 border-b border-slate-800">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <span class="text-xs text-slate-500 font-mono pl-4">dashboard.stanroute.kz</span>
+                    </div>
+                    <div class="pt-6 space-y-6">
+                        <div class="h-48 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-center relative">
+                            <!-- Карта мира/маршрута (имитация) -->
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                            <div class="z-10 text-center space-y-2">
+                                <p class="text-xs text-amber-500 font-mono tracking-widest uppercase">Интерактивная карта</p>
+                                <p class="text-sm text-slate-400">Здесь клиент отслеживает движение трала в реальном времени</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-500 block">Заказов выполнено</span>
+                                <span class="text-xl font-bold text-white">1,240+</span>
+                            </div>
+                            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-500 block">На складе (загрузка)</span>
+                                <span class="text-xl font-bold text-white">84%</span>
+                            </div>
+                            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
+                                <span class="text-xs text-slate-500 block">Эффективность</span>
+                                <span class="text-xl font-bold text-emerald-400">99.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ: ОТПРАВКА ЗАЯВКИ (CONTACT) -->
+    <section id="contact" class="py-32 border-t border-slate-900 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
+            <div class="space-y-4">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Готовы оптимизировать логистику?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Оставьте ваши контактные данные. Наши инженеры рассчитают стоимость перевозки или составят проект складского хранения в течение 24 часов.
+                </p>
+            </div>
+
+            <form class="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-left space-y-6 shadow-xl">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Ваше имя</label>
+                        <input type="text" placeholder="Иван Иванов" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Телефон или WhatsApp</label>
+                        <input type="tel" placeholder="+7 (707) 123-4567" class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs font-semibold uppercase text-slate-400 tracking-wider">Тип услуги</label>
+                    <select class="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors">
+                        <option>Перевозка негабаритного груза</option>
+                        <option>Аренда и обслуживание на 3PL складе</option>
+                        <option>Комплексная IT-интеграция / Другое</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-4 text-base font-bold text-slate-950 bg-amber-500 hover:bg-amber-400 rounded-lg transition-colors shadow-lg shadow-amber-500/10">
+                    Отправить запрос
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ (FOOTER) -->
+    <footer class="py-12 border-t border-slate-900 bg-slate-950 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+                <span class="text-lg font-black tracking-wider text-white">STAN<span class="text-amber-500">ROUTE</span></span>
+                <p class="text-xs mt-2">© 2026 Stan Route. Все права защищены. Алматы, Казахстан.</p>
+            </div>
+            <div class="flex space-x-6 text-xs">
+                <a href="#" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+                <a href="#" class="hover:text-white transition-colors">Условия использования</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
